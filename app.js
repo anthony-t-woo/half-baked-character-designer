@@ -9,13 +9,15 @@ const reportEl = document.getElementById('report');
 const catchphrasesEl = document.getElementById('catchphrases');
 const catchphraseInput = document.getElementById('catchphrase-input');
 const catchphraseButton = document.getElementById('catchphrase-button');
-
+const charNameInput = document.getElementById('char-name-input');
+const charNameButton = document.getElementById('char-name-button');
+const charNameEl = document.getElementById('char-name');
 // set state for how many times the user changes the head, middle, and bottom
 let headChange = 0;
 let middleChange = 0;
 let bottomChange = 0;
 // set state for all of the character's catchphrases
-let catchphrases = ['hiii', 'byeee', 'lets go'];
+let catchphrases = [];
 
 headDropdown.addEventListener('change', () => {
     // get the value of the head dropdown
@@ -63,6 +65,10 @@ catchphraseButton.addEventListener('click', () => {
         // update the dom to show the new catchphrases (refactor to/call displayCatchphrases to do this work)
         displayCatchphrases();
     }
+});
+
+charNameButton.addEventListener('click', () => {
+    charNameEl.textContent = charNameInput.value;
 });
 
 function displayStats() {

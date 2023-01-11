@@ -21,6 +21,7 @@
                     <label>
                         Head
                         <select id="head-dropdown">
+                            <option value="">select a top</option>
                             <option value="bird">Bird</option>
                             <option value="duck">Duck</option>
                             <option value="dog">Dog</option>
@@ -30,6 +31,7 @@
                     <label>
                         Middle
                         <select id="middle-dropdown">
+                            <option value="">select a middle</option>
                             <option value="blue">Blue</option>
                             <option value="dress">Fancy</option>
                             <option value="pink">Pink</option>
@@ -39,6 +41,7 @@
                     <label>
                         Bottom
                         <select id="bottom-dropdown">
+                            <option value="">select a bottom</option>
                             <option value="leg">Single Leg</option>
                             <option value="white">White Pants</option>
                             <option value="blue">Blue Jeans</option>
@@ -46,8 +49,13 @@
                     </label>
                     <label>
                         Add a catch phrase
-                        <input id="catchphrase-input" required />
+                        <input id="catchphrase-input" />
                         <button id="catchphrase-button">Add</button>
+                    </label>
+                    <label>
+                        Name your character
+                        <input id="char-name-input" />
+                        <button id="char-name-button">Submit</button>
                     </label>
                 </div>
                 <div id="stats">
@@ -56,6 +64,7 @@
                 </div>
             </div>
             <div class="right">
+                <h1 id="char-name" class="char-name"></h1>
                 <div class="character">
                     <div class="bg head" id="head"></div>
                     <div class="bg middle" id="middle"></div>
