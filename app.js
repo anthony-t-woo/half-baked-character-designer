@@ -15,6 +15,7 @@ let headChange = 0;
 let middleChange = 0;
 let bottomChange = 0;
 // set state for all of the character's catchphrases
+let catchphrases = ['hiii', 'byeee', 'lets go'];
 
 headDropdown.addEventListener('change', () => {
     // get the value of the head dropdown
@@ -51,6 +52,7 @@ catchphraseButton.addEventListener('click', () => {
     const currentCatchphrase = catchphraseInput.value;
     console.log(currentCatchphrase);
     // push the new catchphrase to the catchphrase array in state
+    catchphrases.push(currentCatchphrase);
     // clear out the form input's value so it's empty to the user
     // update the dom to show the new catchphrases (refactor to/call displayCatchphrases to do this work)
 });
