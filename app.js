@@ -28,7 +28,7 @@ let headOptionsArray = [
 let middleOptionsArray = [
     { display: 'Select an option', value: '' },
     { display: 'Blue', value: 'blue' },
-    { display: 'Fancy', value: 'fancy' },
+    { display: 'Fancy', value: 'dress' },
     { display: 'Pink', value: 'pink' },
     { display: 'Red', value: 'red' },
 ];
