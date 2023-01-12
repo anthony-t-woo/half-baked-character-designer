@@ -18,6 +18,45 @@ let middleChange = 0;
 let bottomChange = 0;
 // set state for all of the character's catchphrases
 let catchphrases = [];
+let headOptionsArray = [
+    { display: 'Select an option', value: '' },
+    { display: 'Bird', value: 'bird' },
+    { display: 'Duck', value: 'duck' },
+    { display: 'Dog', value: 'dog' },
+    { display: 'Horse', value: 'horse' },
+];
+let middleOptionsArray = [
+    { display: 'Select an option', value: '' },
+    { display: 'Blue', value: 'blue' },
+    { display: 'Fancy', value: 'fancy' },
+    { display: 'Pink', value: 'pink' },
+    { display: 'Red', value: 'red' },
+];
+let bottomOptionsArray = [
+    { display: 'Select an option', value: '' },
+    { display: 'Leg', value: 'leg' },
+    { display: 'White', value: 'white' },
+    { display: 'Blue', value: 'blue' },
+];
+
+for (let headOption of headOptionsArray) {
+    const headOptionEl = document.createElement('option');
+    headOptionEl.textContent = headOption.display;
+    headOptionEl.value = headOption.value;
+    headDropdown.append(headOptionEl);
+}
+for (let middleOption of middleOptionsArray) {
+    const middleOptionEl = document.createElement('option');
+    middleOptionEl.textContent = middleOption.display;
+    middleOptionEl.value = middleOption.value;
+    middleDropdown.append(middleOptionEl);
+}
+for (let bottomOption of bottomOptionsArray) {
+    const bottomOptionEl = document.createElement('option');
+    bottomOptionEl.textContent = bottomOption.display;
+    bottomOptionEl.value = bottomOption.value;
+    bottomDropdown.append(bottomOptionEl);
+}
 
 headDropdown.addEventListener('change', () => {
     // get the value of the head dropdown
@@ -72,7 +111,7 @@ charNameButton.addEventListener('click', () => {
 });
 
 function displayStats() {
-    reportEl.textContent = `You have changed the head ${headChange} times, the middle ${middleChange} times, and the bottom ${bottomChange} times. Here is a list of your character's favorite catchphrases:`;
+    reportEl.textContent = `You have changed the head ${headChange} time(s), the middle ${middleChange} time(s), and the bottom ${bottomChange} time(s). Here is a list of your character's favorite catchphrase(s):`;
     // text content of the reportEl to tell the user how many times they've changed each piece of the state
 }
 
